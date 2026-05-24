@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LWAYS OPTIQUE ET AUDITION - Spécialiste en optique et audition. Vente en gros de verres, montures, lentilles de contact et appareils auditifs. Exportation internationale.">
+    <meta name="keywords" content="optique Combs-la-Ville, appareils auditifs France, lentilles de contact gros, export optique France">
+    <title>LWAYS OPTIQUE ET AUDITION - Spécialiste en optique et audition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Variables CSS */
+        :root {
+            --primary-color: #0b2545; /* Bleu marine */
+            --secondary-color: #ff6b35; /* Orange */
+            --accent-color: #134074; /* Bleu plus clair */
+            --text-color: #333;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+            --font-main: 'Helvetica Neue', Arial, sans-serif;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: var(--light-color); /* Fond de base plus simple */
+        }
+
+        /* Utilitaires */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 70px 0; /* Padding standard pour les sections */
+        }
+
+        .section-title {
+            font-size: 2.4rem;
+            margin-bottom: 40px;
+            text-align: center;
+            color: var(--primary-color);
+            font-weight: 700;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--secondary-color);
+            color: white !important; 
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn i {
+            margin-right: 8px;
+        }
+
+        .btn:hover {
+            background-color: #e85a20;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Header et Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .header-scrolled {
+            background-color: white;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0; 
+            transition: padding 0.3s ease;
+        }
+      
+        .logo {
+            font-size: 1.5rem; /* Ajusté pour mieux s'adapter */
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        .logo svg {
+            height: 35px; /* Ajusté */
+            margin-right: 8px;
+        }
+        .logo span {
+            color: var(--secondary-color);
+        }
+        .logo .logo-text-main { /* Pour cacher "OPTIQUE & AUDITION" sur petits écrans */
+            display: inline;
+        }
+        .logo .logo-text-secondary {
+             display: inline;
+        }
+
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        .nav-links li {
+            margin-left: 25px; /* Espace réduit entre les liens */
+        }
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        .nav-links a i {
+            margin-right: 6px;
+            font-size: 0.9em;
+        }
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            cursor: pointer;
+            font-size: 1.6rem; /* Taille ajustée */
+            color: var(--primary-color);
+            padding: 8px; /* Pour une meilleure zone de clic */
+            background-color: transparent;
+            border: none;
+            z-index: 1005; /* S'assurer qu'il est au-dessus des liens */
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh; 
+            /* Overlay plus fort pour lisibilité du texte blanc */
+            background: linear-gradient(rgba(11, 37, 69, 0.9), rgba(11, 37, 69, 0.9)), 
+                        url('https://lways-optique.fr/vitrine_lunette_et_autition.PNG') center/cover no-repeat;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;   
+            text-align: center;
+            color: white;
+            position: relative;
+            padding-top: 80px; /* Espace pour le header fixe */
+            padding-bottom: 40px; 
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            width: 100%; 
+            padding: 0 20px; /* Padding horizontal */
+        }
+
+        .hero-title {
+            font-size: 3rem; /* Taille de base */
+            font-weight: 700;
+            line-height: 1.2; /* Plus serré */
+            margin-bottom: 15px;
+            animation: fadeInDown 1s ease;
+            /* Ombre portée renforcée pour lisibilité maximale */
+            text-shadow: 0px 0px 10px rgba(0,0,0,1), 0px 0px 18px rgba(0,0,0,0.8);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem; /* Taille de base */
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.3s forwards;
+            opacity: 0; 
+            font-weight: 400; /* Moins gras que le titre */
+            text-shadow: 0px 0px 8px rgba(0,0,0,0.9), 0px 0px 15px rgba(0,0,0,0.7);
+        }
+
+        .hero-cta {
+            animation: fadeInUp 1s ease 0.6s forwards;
+            opacity: 0; 
+        }
+
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 35px;
+            animation: fadeInUp 1s ease 0.9s forwards; 
+            opacity: 0; 
+        }
+        .hero-icon {
+            text-align: center;
+        }
+        .hero-icon i {
+            font-size: 2.8rem;
+            margin-bottom: 8px;
+            color: #ffd166; 
+            text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+        }
+        .hero-icon p {
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-shadow: 0px 0px 4px rgba(0,0,0,0.7);
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--light-color);
+            position: relative;
+            overflow: hidden; /* Pour les formes décoratives si réactivées */
+        }
+        /* .about::before { ... } pour les motifs de fond si souhaité */
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start; /* Aligner en haut si hauteurs différentes */
+            gap: 30px; /* Espace entre les deux colonnes */
+            position: relative;
+            z-index: 1;
+        }
+        .about-text {
+            flex: 1 1 55%; /* Prend plus de place */
+            min-width: 300px;
+        }
+        .about-text p {
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        .about-keypoints {
+            display: flex;
+            flex-wrap: wrap; /* Permet le passage à la ligne sur mobile */
+            margin-top: 25px;
+            gap: 15px; 
+        }
+        .keypoint {
+            flex: 1 1 200px; /* Base flexible, permet 2 par ligne si assez d'espace */
+            color: white;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            min-width: 180px;
+        }
+        .keypoint i {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+            display: block; 
+        }
+        .keypoint h3 {
+            margin-bottom: 5px;
+            font-size: 1.05rem;
+            color: white; 
+        }
+        .keypoint p {
+            font-size: 0.85rem;
+            color: white; 
+            margin-bottom: 0; 
+        }
+        .keypoint-quality { background: var(--primary-color); }
+        .keypoint-delivery { background: var(--accent-color); }
+
+        .about-icons {
+            flex: 1 1 40%; /* Prend moins de place */
+            min-width: 280px;
+            display: flex;
+            flex-direction: column; /* Empiler les icon-box verticalement */
+            gap: 20px; 
+        }
+        .icon-box {
+            text-align: center;
+            transition: transform 0.3s ease;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+        .icon-box:hover {
+            transform: translateY(-8px);
+        }
+        .icon-box i {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            color: var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        .icon-box:hover i {
+            color: var(--secondary-color);
+            transform: scale(1.1);
+        }
+        .icon-box h3 {
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+        .icon-box p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Services Section */
+        .services {
+            background-color: white;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .service-card {
+            background-color: var(--light-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex; 
+            flex-direction: column; 
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+        .service-icon {
+            height: 180px; /* Hauteur réduite */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-icon i {
+            position: relative;
+            z-index: 2; 
+            font-size: 3.5rem;
+            color: white;
+        }
+        .service-content {
+            padding: 25px;
+            flex-grow: 1; 
+        }
+        .service-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+        }
+        .service-content h3 i {
+            margin-right: 10px;
+            color: var(--secondary-color);
+            font-size: 1em; /* Relatif au h3 */
+        }
+        .service-content p.service-description { /* Classe ajoutée pour description */
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+        .service-content ul {
+            list-style: none;
+            padding-left: 0; 
+        }
+        .service-content ul li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 22px; 
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .service-content ul li i.fa-check-circle { 
+            position: absolute;
+            left: 0;
+            top: 3px; 
+            color: var(--secondary-color);
+            font-size: 0.9em;
+        }
+
+        /* Gallery Section */
+.gallery {
+    background-color: var(--light-color); 
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+}
+.gallery-item {
+    height: 260px; 
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+    background-size: cover;
+    background-position: center;
+    display: flex; 
+    /* align-items: flex-end;  Retiré, car géré par l'overlay */
+}
+.gallery-item:hover {
+    transform: translateY(-8px);
+}
+
+.gallery-overlay {
+    width: 100%;
+    height: 100%; /* Prend toute la hauteur */
+    padding: 18px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* Initialement, le titre est en bas, le paragraphe caché */
+    justify-content: flex-end; /* Aligne le contenu (titre) en bas */
+    align-items: center; /* Centre le titre horizontalement */
+    text-align: center;
+    /* Gradient initial pour rendre le titre lisible en bas */
+    background: linear-gradient(transparent 30%, rgba(11, 37, 69, 0.7) 80%, rgba(11, 37, 69, 0.85) 100%);
+    transition: background 0.4s ease-in-out, justify-content 0.4s ease-in-out; 
+}
+
+.gallery-item:hover .gallery-overlay {
+    /* Au survol, l'overlay devient plus opaque et le contenu se centre verticalement */
+    background: rgba(11, 37, 69, 0.92); 
+    justify-content: center; 
+}
+
+.gallery-overlay h3 {
+    margin: 0; /* Pas de marge par défaut pour le H3 */
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    /* Visible par défaut */
+    opacity: 1;
+    transform: translateY(0); 
+    transition: opacity 0.3s ease, transform 0.3s ease, margin-bottom 0.3s ease;
+}
+.gallery-item:hover .gallery-overlay h3 {
+    /* Au survol, ajoute une marge en bas si le paragraphe apparaît */
+    margin-bottom: 8px; 
+}
+
+.gallery-overlay h3 i {
+    margin-right: 8px;
+    font-size: 1.1em; 
+}
+
+.gallery-overlay p {
+    /* Caché par défaut */
+    opacity: 0;
+    transform: translateY(10px); /* Commence un peu en bas pour l'animation */
+    max-height: 0; /* Ne prend pas de place verticalement */
+    overflow: hidden;
+    max-width: 95%; /* S'assure qu'il ne déborde pas trop */
+    font-size: 0.9rem;
+    margin: 0 auto; 
+    line-height: 1.4;
+    transition: opacity 0.3s ease 0.1s, transform 0.3s ease 0.1s, max-height 0.4s ease 0.1s; /* Léger délai et transition pour max-height */
+}
+
+.gallery-item:hover .gallery-overlay p {
+    /* Apparaît au survol */
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 100px; /* Hauteur suffisante pour afficher le paragraphe (ajuster si besoin) */
+}
+        
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px; 
+        }
+        .contact-info {
+            flex: 1 1 40%;
+            min-width: 280px;
+        }
+        .contact-info h3, .contact-form h3 { /* Titre pour formulaire aussi */
+            font-size: 1.4rem;
+            margin-bottom: 18px;
+            color: var(--primary-color);
+        }
+        .contact-details {
+            margin-bottom: 25px;
+        }
+        .contact-details p {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start; 
+            font-size: 0.95rem;
+        }
+        .contact-details i {
+            margin-right: 10px; 
+            color: var(--secondary-color);
+            font-size: 1.1rem;
+            min-width: 18px; 
+            padding-top: 2px; 
+        }
+        .contact-details a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-details a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .contact-certifications { 
+            margin-top: 25px;
+            background: var(--light-color);
+            padding: 18px;
+            border-radius: 8px;
+        }
+        .contact-certifications h3 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        .certifications-grid {
+            display: flex;
+            margin-top: 12px;
+            gap: 12px; 
+        }
+        .certification-item {
+            flex: 1;
+            text-align: center;
+        }
+        .certification-item i {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+        }
+        .certification-item p {
+            font-size: 0.75rem;
+            color: var(--text-color);
+            margin-bottom: 0;
+        }
+        .cert-quality i { color: var(--secondary-color); }
+        .cert-ce i { color: var(--accent-color); }
+        .cert-support i { color: var(--primary-color); }
+
+
+        .contact-form {
+            flex: 1 1 55%; 
+            min-width: 300px;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--box-shadow);
+        }
+        .form-group {
+            margin-bottom: 18px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 6px; 
+            font-weight: 500;
+            font-size: 0.9rem;
+            display: flex; 
+            align-items: center;
+        }
+        .form-group label i {
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-control::placeholder {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.15rem rgba(255, 107, 53, 0.2); 
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .map-container {
+            margin-top: 40px;
+            height: 350px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 50px 0 15px; 
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 25px; 
+            margin-bottom: 25px;
+        }
+        .footer-column { /* Classe commune pour les colonnes du footer */
+            flex: 1;
+            min-width: 220px;
+        }
+        .footer-logo-section .logo-footer { /* Pour le logo spécifique au footer */
+            font-size: 1.5rem; /* Coherent avec header */
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .footer-logo-section .logo-footer svg {
+            height: 30px;
+            margin-right: 8px;
+        }
+        .footer-logo-section .logo-footer svg circle[stroke="currentColor"],
+        .footer-logo-section .logo-footer svg path[stroke="currentColor"] {
+             stroke: white; /* Assurer que le SVG est blanc */
+        }
+        .footer-logo-section .logo-footer span {
+            color: var(--secondary-color);
+        }
+        .footer-logo-section p {
+            color: #bbb; /* Plus clair */
+            font-size: 0.9rem;
+            line-height: 1.6;
+            max-width: 320px;
+        }
+
+        .footer-links h3 {
+            font-size: 1.15rem;
+            margin-bottom: 18px;
+            position: relative;
+            padding-bottom: 8px;
+            color: white; 
+        }
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        .footer-links ul {
+            list-style: none;
+            padding-left: 0; 
+        }
+        .footer-links ul li {
+            margin-bottom: 8px;
+        }
+        .footer-links ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s ease, padding-left 0.3s ease; 
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        .footer-links ul li a i { 
+            margin-right: 6px;
+            font-size: 0.8em;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+        .footer-links ul li a:hover {
+            color: var(--secondary-color);
+            padding-left: 4px; 
+        }
+        .footer-links ul li a:hover i {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px; 
+            border-top: 1px solid #555; /* Ligne plus visible */
+        }
+        .footer-bottom p {
+            color: #bbb;
+            font-size: 0.85rem;
+        }
+        .footer-bottom p i {
+            font-size: 0.8em; /* Coeur plus petit */
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 992px) { /* Tablettes et grands téléphones */
+            .section { padding: 60px 0; }
+            .section-title { font-size: 2.2rem; } 
+            .hero-title { font-size: 2.6rem; }    
+            .hero-subtitle { font-size: 1.2rem; } 
+            .logo .logo-text-secondary { display: none; } /* Cache "OPTIQUE & AUDITION" */
+            .nav-links li { margin-left: 20px; }
+
+            .about-content { flex-direction: column; }
+            .about-text { flex-basis: 100%; margin-bottom: 30px; }
+            .about-icons { flex-basis: 100%; flex-direction: row; justify-content: space-around; } /* Icônes en ligne */
+            .icon-box { flex: 1 1 calc(50% - 10px); min-width: 200px; max-width: 280px; } /* 2 par ligne max */
+            
+            .gallery-container { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+        }
+
+        @media (max-width: 768px) { /* Petites tablettes et téléphones */
+            .section { padding: 50px 0; }
+            .section-title { font-size: 2rem; }
+            
+            .hero { padding-top: 70px; padding-bottom: 30px; } 
+            .hero-title { font-size: 2rem; line-height: 1.25; } 
+            .hero-subtitle { font-size: 1.1rem; margin-bottom: 25px; }
+            .hero-icons { flex-direction: column; gap: 18px; margin-top: 25px; }
+            .hero-icon i { font-size: 2.2rem; }
+            .hero-icon p { font-size: 0.9rem; }
+
+            .logo .logo-text-main { font-size: 1.3rem; }
+            .logo svg { height: 30px; }
+
+            .about-keypoints { flex-direction: column; }
+            .icon-box { flex-basis: 100%; max-width: 320px; margin: 0 auto 15px auto; } 
+            
+            .services-grid { grid-template-columns: 1fr; } 
+            .gallery-container { grid-template-columns: 1fr; gap: 15px; } 
+            .gallery-item { height: 240px; }
+
+            .contact-container { flex-direction: column; }
+            .contact-info { margin-bottom: 30px; }
+
+            .footer-content { flex-direction: column; text-align: center; }
+            .footer-column { min-width: 100%; margin-bottom: 15px; }
+            .footer-logo-section .logo-footer { justify-content: center; }
+            .footer-logo-section p { max-width: 100%; text-align: center; }
+            .footer-links h3::after { left: 50%; transform: translateX(-50%); }
+
+
+            /* Menu Mobile */
+            .mobile-menu-btn { display: block; }
+            .nav-links {
+                position: fixed;
+                top: 0; 
+                right: -100%; /* Commence hors écran à droite */
+                width: 280px; /* Largeur du menu latéral */
+                height: 100%; 
+                background-color: white; 
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                flex-direction: column;
+                align-items: flex-start; /* Aligner à gauche */
+                justify-content: flex-start; /* Aligner en haut */
+                transform: translateX(100%); 
+                transition: transform 0.35s ease-in-out;
+                z-index: 1001; 
+                padding-top: 70px; /* Espace pour le bouton de fermeture (placé dynamiquement) */
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .nav-links.active {
+                transform: translateX(0); 
+                right: 0; /* S'assure qu'il est bien positionné */
+            }
+            .nav-links li {
+                margin: 0 0 20px 0; /* Espace vertical, pas de marge gauche */
+                width: 100%;
+            }
+            .nav-links a {
+                font-size: 1.1rem; 
+                padding: 10px 0;
+                width: 100%;
+                border-bottom: 1px solid #eee;
+            }
+            .nav-links a:hover {
+                color: var(--secondary-color);
+                background-color: #f9f9f9;
+            }
+            .nav-links li:last-child a {
+                border-bottom: none;
+            }
+             /* Déplacement du bouton menu si menu actif (pour X) */
+            .mobile-menu-btn.menu-open {
+                /* Si vous voulez le déplacer ou styler différemment quand le menu est ouvert */
+            }
+        }
+
+        @media (max-width: 480px) { /* Très petits écrans */
+            .container { padding: 0 15px; } 
+            .section-title { font-size: 1.7rem; margin-bottom: 30px; }
+            .hero-title { font-size: 1.7rem; } 
+            .hero-subtitle { font-size: 1rem; }
+            .btn { padding: 10px 22px; font-size: 0.9rem; }
+
+            .icon-box p { font-size: 0.85rem; }
+            .service-content h3 { font-size: 1.25rem; }
+            .service-content p.service-description, .service-content ul li { font-size: 0.85rem; }
+
+            .contact-form { padding: 20px; }
+            .form-control { padding: 9px; font-size: 0.9rem; }
+            textarea.form-control { min-height: 100px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#home" class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 20 C12 15.5817 15.5817 12 20 12 C24.4183 12 28 15.5817 28 20 C28 24.4183 24.4183 28 20 28 C15.5817 28 12 24.4183 12 20Z" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="20" cy="20" r="6" fill="var(--secondary-color)"/>
+                        <path d="M25 15 L30 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M10 30 L15 25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span class="logo-text-main">LWAYS</span> <span class="logo-text-secondary"><span>OPTIQUE & AUDITION</span></span>
+                </a>
+                <button class="mobile-menu-btn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links-mobile">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="nav-links-mobile" role="menubar">
+                    <li role="none"><a href="#home" role="menuitem"><i class="fas fa-home"></i>Accueil</a></li>
+                    <li role="none"><a href="#about" role="menuitem"><i class="fas fa-info-circle"></i>À propos</a></li>
+                    <li role="none"><a href="#services" role="menuitem"><i class="fas fa-concierge-bell"></i>Services</a></li>
+                    <li role="none"><a href="#gallery" role="menuitem"><i class="fas fa-images"></i>Produits</a></li>
+                    <li role="none"><a href="#contact" role="menuitem"><i class="fas fa-envelope"></i>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">LWAYS OPTIQUE ET AUDITION</h1>
+                <p class="hero-subtitle">Spécialiste en optique et audition – Vente en gros et exportation</p>
+                <div class="hero-cta">
+                    <a href="#contact" class="btn"><i class="fas fa-phone-alt"></i> Contactez-nous</a>
+                </div>
+                <div class="hero-icons">
+                    <div class="hero-icon">
+                        <i class="fas fa-glasses"></i>
+                        <p>Optique de Qualité</p>
+                    </div>
+                    <div class="hero-icon">
+                        <i class="fas fa-assistive-listening-systems"></i>
+                        <p>Solutions Auditives</p>
+                    </div>
+                    <div class="hero-icon">
+                        <i class="fas fa-globe-europe"></i>
+                        <p>Export Mondial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">À Propos de Nous</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>LWAYS OPTIQUE ET AUDITION propose des solutions optiques et auditives de qualité aux professionnels et particuliers. Notre expertise s'étend à l'exportation mondiale de produits certifiés.</p>
+                    <p>Basés à Combs-la-Ville, nous sommes reconnus pour la qualité de nos produits et notre service client exceptionnel. Notre équipe d'experts est dédiée à fournir des solutions adaptées à chaque besoin.</p>
+                    <div class="about-keypoints">
+                        <div class="keypoint keypoint-quality">
+                            <i class="fas fa-medal"></i>
+                            <h3>Qualité Certifiée</h3>
+                            <p>Produits aux normes européennes</p>
+                        </div>
+                        <div class="keypoint keypoint-delivery">
+                            <i class="fas fa-globe"></i>
+                            <h3>Export International</h3>
+                            <p>Expédition de produits dans le monde entier</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-icons">
+                    <div class="icon-box">
+                        <i class="fas fa-glasses"></i>
+                        <h3>Verres & Montures</h3>
+                        <p>Large sélection de montures et verres de qualité premium.</p>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-eye"></i>
+                        <h3>Lentilles de Contact</h3>
+                        <p>Variété de lentilles pour tous types de correction et confort.</p>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-assistive-listening-systems"></i>
+                        <h3>Appareils Auditifs</h3>
+                        <p>Technologies auditives de pointe, discrètes et performantes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section-title">Nos Solutions Complètes</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon" style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+                        <i class="fas fa-glasses"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-glasses"></i>Optique Professionnelle</h3>
+                        <p class="service-description">Solutions optiques complètes pour les professionnels et les points de vente.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Verres optiques de haute précision</li>
+                            <li><i class="fas fa-check-circle"></i>Montures tendance et classiques</li>
+                            <li><i class="fas fa-check-circle"></i>Lentilles de contact toutes marques</li>
+                            <li><i class="fas fa-check-circle"></i>Accessoires et produits d'entretien</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background: linear-gradient(135deg, var(--accent-color), var(--primary-color));">
+                        <i class="fas fa-assistive-listening-systems"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-assistive-listening-systems"></i>Audition Avancée</h3>
+                        <p class="service-description">Équipements auditifs de pointe et support technique spécialisé.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Appareils auditifs dernière génération</li>
+                            <li><i class="fas fa-check-circle"></i>Solutions discrètes et performantes</li>
+                            <li><i class="fas fa-check-circle"></i>Accessoires et consommables</li>
+                            <li><i class="fas fa-check-circle"></i>Conseil et support technique</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3><i class="fas fa-shipping-fast"></i>Exportation Internationale</h3>
+                        <p class="service-description">Distribution mondiale de nos produits avec expertise logistique.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Livraison mondiale sécurisée et rapide</li>
+                            <li><i class="fas fa-check-circle"></i>Expertise en formalités douanières</li>
+                            <li><i class="fas fa-check-circle"></i>Partenariats de distribution fiables</li>
+                            <li><i class="fas fa-check-circle"></i>Solutions adaptées à chaque marché</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Galerie -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <h2 class="section-title">Découvrez Nos Produits</h2>
+            <div class="gallery-container">
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/random/500x400/?stylish-eyeglasses,optical-frames');">
+                    <div class="gallery-overlay">
+                        <h3><i class="fas fa-glasses"></i> Montures Tendance</h3>
+                        <p>Designs modernes et classiques pour tous les styles.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/random/500x400/?contact-lenses,eye-care-products');">
+                    <div class="gallery-overlay">
+                        <h3><i class="fas fa-eye"></i> Lentilles de Contact</h3>
+                        <p>Confort et clarté pour une vision parfaite au quotidien.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/random/500x400/?modern-hearing-aids,audiology-device');">
+                    <div class="gallery-overlay">
+                        <h3><i class="fas fa-assistive-listening-systems"></i> Appareils Auditifs</h3>
+                        <p>Technologie de pointe pour une audition améliorée.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/random/500x400/?optical-lens-manufacturing,precision-optics');">
+                    <div class="gallery-overlay">
+                        <h3><i class="fas fa-cogs"></i> Verres Optiques</h3>
+                        <p>Verres de haute qualité pour toutes corrections visuelles.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/random/500x400/?global-logistics,shipping-containers');">
+                    <div class="gallery-overlay">
+                        <h3><i class="fas fa-globe-americas"></i> Export International</h3>
+                        <p>Solutions d'exportation fiables vers le monde entier.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" style="background-image: url('https://source.unsplash.com/random/500x400/?optical-accessories,eyewear-cases');">
+                    <div class="gallery-overlay">
+                        <h3><i class="fas fa-toolbox"></i> Accessoires Optiques</h3>
+                        <p>Gamme complète d'accessoires et produits d'entretien.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-Nous Facilement</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Nos Coordonnées</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> 31 bis rue Sermonoise, 77380 Combs-la-Ville, France</p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:contact@lways-optique.fr">contact@lways-optique.fr</a></p>
+                        <p><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</p>
+                        <p><i class="fas fa-info-circle"></i> SIRET: 945 188 084 00015</p>
+                    </div>
+                    <div class="contact-certifications">
+                        <h3><i class="fas fa-certificate"></i> Nos Engagements</h3>
+                        <div class="certifications-grid">
+                            <div class="certification-item cert-quality">
+                                <i class="fas fa-award"></i>
+                                <p>Qualité ISO</p>
+                            </div>
+                            <div class="certification-item cert-ce">
+                                <i class="fas fa-shield-alt"></i>
+                                <p>Normes CE</p>
+                            </div>
+                             <div class="certification-item cert-support">
+                                <i class="fas fa-headset"></i>
+                                <p>Support Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Envoyez-nous un message</h3>
+                    <form id="contactForm" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name"><i class="fas fa-user"></i> Nom Complet</label>
+                            <input type="text" id="name" name="name" class="form-control" required placeholder="Votre nom et prénom">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required placeholder="Votre adresse e-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject"><i class="fas fa-tag"></i> Sujet</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required placeholder="Objet de votre message">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><i class="fas fa-comment-alt"></i> Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required placeholder="Écrivez votre message ici..."></textarea>
+                        </div>
+                        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Envoyer le Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2630.70696474501!2d2.562543677013998!3d48.6607210130218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e5e3b1f9a73589%3A0x3e33df2972074e58!2s31bis%20Rue%20Sermonoise%2C%2077380%20Combs-la-Ville!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Notre Localisation"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column footer-logo-section">
+                     <a href="#home" class="logo-footer">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 20 C12 15.5817 15.5817 12 20 12 C24.4183 12 28 15.5817 28 20 C28 24.4183 24.4183 28 20 28 C15.5817 28 12 24.4183 12 20Z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="20" cy="20" r="6" fill="var(--secondary-color)"/>
+                            <path d="M25 15 L30 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M10 30 L15 25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        LWAYS <span>OPTIQUE & AUDITION</span>
+                    </a>
+                    <p>Votre partenaire de confiance pour des solutions optiques et auditives de haute qualité, avec un service d'exportation mondial.</p>
+                </div>
+                <div class="footer-column footer-links">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i>Accueil</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i>À propos</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i>Services</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i>Produits</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+<!--                 <div class="footer-column footer-links">
+                    <h3>Informations</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Mentions légales</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Politique de confidentialité</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>Conditions d'utilisation</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i>FAQ</a></li>
+                    </ul>
+                </div> -->
+            </div>
+            <div class="footer-bottom">
+                <p>© <span id="currentYear">2024</span> LWAYS OPTIQUE ET AUDITION SAS - Capital Social: 1 000,00 Euros – Tous droits réservés. Site conçu avec <i class="fas fa-heart" style="color: var(--secondary-color);"></i>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = document.getElementById('header') ? document.getElementById('header').offsetHeight : 0;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Sticky header
+            const header = document.getElementById('header');
+            function handleScroll() {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            }
+            window.addEventListener('scroll', handleScroll);
+            handleScroll(); // Initial check
+
+            // Mobile menu toggle
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const nav = document.querySelector('.nav-links');
+            
+            if (menuBtn && nav) {
+                menuBtn.addEventListener('click', function() {
+                    const isActive = nav.classList.toggle('active');
+                    this.setAttribute('aria-expanded', isActive);
+                    menuBtn.classList.toggle('menu-open'); // Pour styler le bouton X différemment si besoin
+                    const icon = this.querySelector('i');
+                    if (isActive) {
+                        icon.classList.remove('fa-bars');
+                        icon.classList.add('fa-times');
+                        this.setAttribute('aria-label', 'Fermer le menu');
+                        document.body.style.overflow = 'hidden'; // Empêche le scroll du body quand menu ouvert
+                    } else {
+                        icon.classList.remove('fa-times');
+                        icon.classList.add('fa-bars');
+                        this.setAttribute('aria-label', 'Ouvrir le menu');
+                        document.body.style.overflow = '';
+                    }
+                });
+
+                nav.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (nav.classList.contains('active')) {
+                            nav.classList.remove('active');
+                            menuBtn.setAttribute('aria-expanded', 'false');
+                            menuBtn.classList.remove('menu-open');
+                            const icon = menuBtn.querySelector('i');
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                            menuBtn.setAttribute('aria-label', 'Ouvrir le menu');
+                            document.body.style.overflow = '';
+                        }
+                    });
+                });
+            }
+
+            // Form submission
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const formData = new FormData(contactForm);
+                    const name = formData.get('name') || "Visiteur";
+                    alert(`Merci ${name} pour votre message ! Nous vous contacterons bientôt.`);
+                    contactForm.reset();
+                });
+            }
+
+            // Update copyright year
+            const currentYearSpan = document.getElementById('currentYear');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
